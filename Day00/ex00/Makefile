@@ -10,4 +10,22 @@
 #                                                                              #
 # **************************************************************************** #
 
+NAME = megaphone
 
+COMPILE = g++ 
+
+FLAGS = -Wall -Wextra -Werror
+
+FILES = megaphone.cpp
+
+all : $(NAME)
+
+$(NAME) :
+		$(COMPILE) $(FILES) $(FLAGS) -o $(NAME)
+
+clean:
+		rm -f $(NAME)
+
+fclean: clean
+
+re: fclean all

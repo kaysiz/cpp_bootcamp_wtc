@@ -1,0 +1,44 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ksiziva <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/06/05 07:11:53 by ksiziva           #+#    #+#             */
+/*   Updated: 2019/06/05 10:10:05 by ksiziva          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
+#include <string>
+#include "Phonebook.h"
+
+int main() 
+{
+  std::string command;
+  Phonebook book[8];
+
+  while(1)
+  {
+    std::cout << "Please Enter A Phonebook Command" << std::flush << std::endl;
+    std::cin >> command;
+    if (!command.compare("EXIT"))
+    {
+      std::cout << "Goodbye.." << std::flush << std::endl;
+      return 0;
+    }
+    else if (!command.compare("ADD")) 
+    {
+      std::cout << std::size(book);
+      return 0;
+    }
+    else if (!command.compare("SEARCH"))
+    {
+      book.first_name = "Kuda";
+      book.search();
+      return 0;
+    }
+  }
+  return 0;
+}
